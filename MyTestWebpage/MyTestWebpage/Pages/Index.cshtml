@@ -1,0 +1,17 @@
+﻿@page
+@using ViewModels
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to test page</h1>
+    <p>Pick a test you want to fill out:</p>
+    <ul class="list-group">
+        @foreach (var item in ViewData["Tests"] as List<TestListItem>)
+        {
+            <li class="list-group-item">@item.Name</li>
+        }
+    </ul>
+</div>
